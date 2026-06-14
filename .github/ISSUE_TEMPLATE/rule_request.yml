@@ -1,0 +1,45 @@
+name: Rule Request
+description: Request a new Futu/FTNN/moomoo rule.
+title: "[Rule]: "
+labels:
+  - rule-request
+body:
+  - type: input
+    id: app
+    attributes:
+      label: App
+      placeholder: Futu, Futu OpenD, FTNN, moomoo
+    validations:
+      required: true
+  - type: textarea
+    id: domains
+    attributes:
+      label: Domains
+      placeholder: one domain per line
+    validations:
+      required: false
+  - type: textarea
+    id: ips
+    attributes:
+      label: IPs
+      placeholder: one CIDR or IP per line
+    validations:
+      required: false
+  - type: dropdown
+    id: policy
+    attributes:
+      label: Required Policy
+      options:
+        - DIRECT
+        - PROXY
+        - REJECT
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Packet capture, DNS log, or reproducible steps.
+    validations:
+      required: true
+

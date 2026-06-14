@@ -1,0 +1,53 @@
+name: Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/**"
+      - "modules/**"
+      - "rules/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Pages artifact
+        run: |
+          mkdir -p public/modules
+          mkdir -p public/rules
+          cp docs/index.html public/index.html
+          cp modules/FTNN.module public/modules/FTNN.module
+          cp modules/coding.module public/modules/coding.module
+          cp modules/social-media.module public/modules/social-media.module
+          cp rules/default.conf public/rules/default.conf
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

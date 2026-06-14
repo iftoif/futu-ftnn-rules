@@ -1,0 +1,30 @@
+name: Bug Report
+description: Report a broken or incorrect rule.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the problem.
+      placeholder: Futu/moomoo cannot connect, or a domain is routed incorrectly.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Client, version, network, and module URL.
+      placeholder: Shadowrocket 2.x, iOS, Raw URL or jsDelivr URL.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: DNS logs, packet capture domains, failed URLs, or screenshots.
+    validations:
+      required: false
+
