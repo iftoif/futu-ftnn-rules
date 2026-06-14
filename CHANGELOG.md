@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented in this file.
 
+## v1.1.1 - 2026-06-15
+
+- Add explicit Claude/Anthropic network domains to `modules/coding.module`.
+- Add Claude Code update, changelog, telemetry, and support-related hosts.
+
 ## v1.1.0 - 2026-06-14
 
 - Add local Shadowrocket module `coding`.
