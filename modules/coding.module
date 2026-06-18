@@ -1,10 +1,10 @@
 #!name=coding
-#!desc=Description Here
+#!desc=AI coding tools + Claude Web/Claude Code/Anthropic API/GitHub/npm
 #!homepage=https://github.com/iftoif/futu-ftnn-rules
 #!author=iftoif
-#!version=1.1.1
+#!version=1.1.2
 
-
+[Rule]
 DOMAIN,alkalicore-pa.clients6.google.com,PROXY
 DOMAIN,alkalimakersuite-pa.clients6.google.com,PROXY
 DOMAIN,anthropic-com.ghost.io,PROXY
@@ -209,3 +209,19 @@ IP-CIDR6,2604:f20::/32,PROXY,no-resolve
 IP-CIDR6,2607:6bc0::/32,PROXY,no-resolve
 IP-ASN,399358,PROXY,no-resolve
 IP-ASN,401518,PROXY,no-resolve
+
+# Docs
+DOMAIN,docs.anthropic.com,US
+
+# Claude CDN
+DOMAIN-SUFFIX,cdn.claude.ai,US
+
+# Claude Code common
+DOMAIN-SUFFIX,github.com,US
+DOMAIN-SUFFIX,githubusercontent.com,US
+DOMAIN-SUFFIX,githubassets.com,US
+DOMAIN-SUFFIX,api.github.com,US
+
+# npm
+DOMAIN-SUFFIX,npmjs.org,US
+DOMAIN-SUFFIX,registry.npmjs.org,US
