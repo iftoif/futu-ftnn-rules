@@ -2,7 +2,7 @@
 #!desc=FTNN/Futu_Open/moomoo observed domains and IP rules, generated from local macOS network capture.
 #!homepage=https://github.com/iftoif/futu-ftnn-rules
 #!author=iftoif
-#!version=1.1.0
+#!version=1.1.1
 [Rule]
 
 DOMAIN-SUFFIX,futuapi.com,PROXY
@@ -10,8 +10,13 @@ DOMAIN-SUFFIX,futuhk.com,PROXY
 DOMAIN-SUFFIX,futuhn.com,PROXY
 DOMAIN-SUFFIX,futunn.com,PROXY
 DOMAIN-SUFFIX,moomoo.com,PROXY
+DOMAIN-SUFFIX,app-measurement.com,PROXY
+DOMAIN-SUFFIX,hstong.com,PROXY
+DOMAIN-SUFFIX,appsflyersdk.com,PROXY
 IP-CIDR,1.14.242.49/32,PROXY,no-resolve
 IP-CIDR,1.14.242.168/32,PROXY,no-resolve
+IP-CIDR,13.215.114.231/32,PROXY,no-resolve
+IP-CIDR,18.166.128.200/32,PROXY,no-resolve
 IP-CIDR,43.128.254.50/32,PROXY,no-resolve
 IP-CIDR,43.129.2.0/24,PROXY,no-resolve
 IP-CIDR,43.130.30.145/32,PROXY,no-resolve
@@ -34,12 +39,14 @@ IP-CIDR,101.32.198.103/32,PROXY,no-resolve
 IP-CIDR,101.33.192.94/32,PROXY,no-resolve
 IP-CIDR,106.55.66.8/32,PROXY,no-resolve
 IP-CIDR,106.55.67.68/32,PROXY,no-resolve
+IP-CIDR,119.28.183.126/32,PROXY,no-resolve
 IP-CIDR,119.28.37.77/32,PROXY,no-resolve
 IP-CIDR,119.28.141.196/32,PROXY,no-resolve
 IP-CIDR,119.28.183.184/32,PROXY,no-resolve
 IP-CIDR,119.28.206.193/32,PROXY,no-resolve
 IP-CIDR,119.28.229.0/24,PROXY,no-resolve
 IP-CIDR,119.28.230.190/32,PROXY,no-resolve
+IP-CIDR,120.77.112.223/32,PROXY,no-resolve
 IP-CIDR,121.5.97.110/32,PROXY,no-resolve
 IP-CIDR,121.5.99.18/32,PROXY,no-resolve
 IP-CIDR,121.5.99.180/32,PROXY,no-resolve
@@ -51,6 +58,7 @@ IP-CIDR,170.106.48.217/32,PROXY,no-resolve
 IP-CIDR,170.106.49.68/32,PROXY,no-resolve
 IP-CIDR,170.106.49.111/32,PROXY,no-resolve
 IP-CIDR,170.106.62.85/32,PROXY,no-resolve
+IP-CIDR,193.112.84.180/32,PROXY,no-resolve
 
 DOMAIN-SUFFIX,futu.com,PROXY
 DOMAIN-SUFFIX,futuhkapp.com,PROXY
