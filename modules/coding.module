@@ -1,10 +1,10 @@
 #!name=coding
-#!desc=AI coding tools + Claude Web/Claude Code/Anthropic API/GitHub/npm
+#!desc=Description Here
 #!homepage=https://github.com/iftoif/futu-ftnn-rules
 #!author=iftoif
-#!version=1.1.2
+#!version=1.2.0
 
-[Rule]
+
 DOMAIN,alkalicore-pa.clients6.google.com,PROXY
 DOMAIN,alkalimakersuite-pa.clients6.google.com,PROXY
 DOMAIN,anthropic-com.ghost.io,PROXY
@@ -12,59 +12,40 @@ DOMAIN,anthropic.auth0.com,PROXY
 DOMAIN,anthropic.com.cdn.cloudflare.net,PROXY
 DOMAIN,antigravity-pa.googleapis.com,PROXY
 DOMAIN,antigravity.googleapis.com,PROXY
-DOMAIN,api.anthropic.com,PROXY
 DOMAIN,api.msn.com,PROXY
 DOMAIN,api.statsig.com,PROXY
 DOMAIN,assets.msn.com,PROXY
 DOMAIN,aws-language-servers.us-east-1.amazonaws.com,PROXY
 DOMAIN,aws-toolkit-language-servers.amazonaws.com,PROXY
-DOMAIN,bridge.claudeusercontent.com,PROXY
 DOMAIN,browser-intake-datadoghq.com,PROXY
 DOMAIN,browser-intake-us5-datadoghq.com,PROXY
 DOMAIN,cdn.growthbook.io,PROXY
 DOMAIN,cdn.usefathom.com,PROXY
 DOMAIN,client-telemetry.us-east-1.amazonaws.com,PROXY
-DOMAIN,claude.ai,PROXY
 DOMAIN,cloudaicompanion.googleapis.com,PROXY
 DOMAIN,cloudcode-pa.googleapis.com,PROXY
-DOMAIN,code.claude.com,PROXY
 DOMAIN,codewhisperer.us-east-1.amazonaws.com,PROXY
 DOMAIN,cognito-identity.us-east-1.amazonaws.com,PROXY
-DOMAIN,console.anthropic.com,PROXY
 DOMAIN,copilot-proxy.githubusercontent.com,PROXY
 DOMAIN,copilot-workspace.githubnext.com,PROXY
 DOMAIN,copilotprodattachments.blob.core.windows.net,PROXY
 DOMAIN,daily-cloudcode-pa.googleapis.com,PROXY
-DOMAIN,docs.claude.com,PROXY
-DOMAIN,downloads.claude.ai,PROXY
 DOMAIN,gateway.bingviz.microsoft.net,PROXY
 DOMAIN,gateway.bingviz.microsoftapp.net,PROXY
 DOMAIN,idetoolkits-hostedfiles.amazonaws.com,PROXY
 DOMAIN,idetoolkits.amazonwebservices.com,PROXY
 DOMAIN,in.appcenter.ms,PROXY
 DOMAIN,location.microsoft.com,PROXY
-DOMAIN,mcp-proxy.anthropic.com,PROXY
 DOMAIN,notebooklm-pa.googleapis.com,PROXY
 DOMAIN,notebooklm.googleapis.com,PROXY
 DOMAIN,odc.officeapps.live.com,PROXY
 DOMAIN,openai-api.arkoselabs.com,PROXY
 DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,PROXY
 DOMAIN,openaicomproductionae4b.blob.core.windows.net,PROXY
-DOMAIN,platform.claude.com,PROXY
 DOMAIN,production-openaicom-storage.azureedge.net,PROXY
 DOMAIN,q-developer-integration.us-east-1.api.aws,PROXY
-DOMAIN,raw.githubusercontent.com,PROXY
 DOMAIN,self.events.data.microsoft.com,PROXY
-DOMAIN,sentry.anthropic.com,PROXY
-DOMAIN,sentry.io,PROXY
 DOMAIN,servd-anthropic-website.b-cdn.net,PROXY
-DOMAIN,statsig.anthropic.com,PROXY
-DOMAIN,statsig.com,PROXY
-DOMAIN,status.anthropic.com,PROXY
-DOMAIN,status.claude.com,PROXY
-DOMAIN,storage.googleapis.com,PROXY
-DOMAIN,support.anthropic.com,PROXY
-DOMAIN,support.claude.com,PROXY
 DOMAIN,static.cloudflareinsights.com,PROXY
 DOMAIN,sydney.bing.com,PROXY
 DOMAIN,webchannel-alkalimakersuite-pa.clients6.google.com,PROXY
@@ -209,19 +190,3 @@ IP-CIDR6,2604:f20::/32,PROXY,no-resolve
 IP-CIDR6,2607:6bc0::/32,PROXY,no-resolve
 IP-ASN,399358,PROXY,no-resolve
 IP-ASN,401518,PROXY,no-resolve
-
-# Docs
-DOMAIN,docs.anthropic.com,US
-
-# Claude CDN
-DOMAIN-SUFFIX,cdn.claude.ai,US
-
-# Claude Code common
-DOMAIN-SUFFIX,github.com,US
-DOMAIN-SUFFIX,githubusercontent.com,US
-DOMAIN-SUFFIX,githubassets.com,US
-DOMAIN-SUFFIX,api.github.com,US
-
-# npm
-DOMAIN-SUFFIX,npmjs.org,US
-DOMAIN-SUFFIX,registry.npmjs.org,US

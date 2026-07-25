@@ -1,0 +1,47 @@
+#!name=Claude / Anthropic
+#!desc=Claude Web + Claude Code + Anthropic API
+#!homepage=https://github.com/iftoif/futu-ftnn-rules
+#!author=iftoif
+#!version=1.0.0
+
+[Rule]
+
+# Claude Web
+
+DOMAIN-SUFFIX,claude.ai,US
+
+# Anthropic
+
+DOMAIN-SUFFIX,anthropic.com,US
+
+# Claude Platform
+
+DOMAIN,platform.claude.com,US
+DOMAIN,console.anthropic.com,US
+DOMAIN,api.anthropic.com,US
+
+# Status
+
+DOMAIN,status.claude.com,US
+DOMAIN,status.anthropic.com,US
+
+# Docs
+
+DOMAIN,docs.anthropic.com,US
+DOMAIN,support.anthropic.com,US
+
+# Claude CDN
+
+DOMAIN-SUFFIX,cdn.claude.ai,US
+
+# Claude Code 常用
+
+DOMAIN-SUFFIX,github.com,US
+DOMAIN-SUFFIX,githubusercontent.com,US
+DOMAIN-SUFFIX,githubassets.com,US
+DOMAIN-SUFFIX,api.github.com,US
+
+# npm
+
+DOMAIN-SUFFIX,npmjs.org,US
+DOMAIN-SUFFIX,registry.npmjs.org,US

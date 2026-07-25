@@ -2,7 +2,7 @@
 #!desc=Description Here
 #!homepage=https://github.com/iftoif/futu-ftnn-rules
 #!author=iftoif
-#!version=1.1.0
+#!version=1.2.0
 
 
 DOMAIN-SUFFIX,youtube.ae,PROXY
