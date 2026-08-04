@@ -4,7 +4,7 @@
 #!author=iftoif
 #!version=1.2.0
 
-
+[Rule]
 DOMAIN-SUFFIX,youtube.ae,PROXY
 DOMAIN-SUFFIX,youtube.co.ae,PROXY
 DOMAIN-SUFFIX,dailym.ai,PROXY
