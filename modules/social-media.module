@@ -1,8 +1,8 @@
 #!name=社交媒体
-#!desc=Description Here
+#!desc=Global social media, messaging, creator, and community platforms
 #!homepage=https://github.com/iftoif/futu-ftnn-rules
 #!author=iftoif
-#!version=1.2.0
+#!version=1.3.0
 
 [Rule]
 DOMAIN-SUFFIX,youtube.ae,PROXY
@@ -1368,3 +1368,49 @@ DOMAIN-SUFFIX,facebook.wang,PROXY
 DOMAIN-SUFFIX,huffingtonpost.co.za,PROXY
 DOMAIN-SUFFIX,youtube.co.za,PROXY
 DOMAIN-SUFFIX,youtube.co.zw,PROXY
+
+# Additional common social media and community services
+DOMAIN-SUFFIX,9cache.com,PROXY
+DOMAIN-SUFFIX,9gag.com,PROXY
+DOMAIN-SUFFIX,behance.net,PROXY
+DOMAIN-SUFFIX,bere.al,PROXY
+DOMAIN-SUFFIX,bereal.com,PROXY
+DOMAIN-SUFFIX,blueskyweb.xyz,PROXY
+DOMAIN-SUFFIX,deviantart.com,PROXY
+DOMAIN-SUFFIX,deviantart.net,PROXY
+DOMAIN-SUFFIX,dribbble.com,PROXY
+DOMAIN-SUFFIX,fb.watch,PROXY
+DOMAIN-SUFFIX,flickr.com,PROXY
+DOMAIN-SUFFIX,gab.com,PROXY
+DOMAIN-SUFFIX,goodreads.com,PROXY
+DOMAIN-SUFFIX,kick.com,PROXY
+DOMAIN-SUFFIX,lemon8-app.com,PROXY
+DOMAIN-SUFFIX,letterboxd.com,PROXY
+DOMAIN-SUFFIX,likee.video,PROXY
+DOMAIN-SUFFIX,medium.com,PROXY
+DOMAIN-SUFFIX,meetup.com,PROXY
+DOMAIN-SUFFIX,meetupstatic.com,PROXY
+DOMAIN-SUFFIX,mewe.com,PROXY
+DOMAIN-SUFFIX,nextdoor.com,PROXY
+DOMAIN-SUFFIX,ok.ru,PROXY
+DOMAIN-SUFFIX,patreon.com,PROXY
+DOMAIN-SUFFIX,patreonusercontent.com,PROXY
+DOMAIN-SUFFIX,pin.it,PROXY
+DOMAIN-SUFFIX,quora.com,PROXY
+DOMAIN-SUFFIX,quoracdn.net,PROXY
+DOMAIN,reddit.app.link,PROXY
+DOMAIN-SUFFIX,reddithelp.com,PROXY
+DOMAIN-SUFFIX,redditinc.com,PROXY
+DOMAIN-SUFFIX,rumble.com,PROXY
+DOMAIN-SUFFIX,signal.art,PROXY
+DOMAIN-SUFFIX,signal.group,PROXY
+DOMAIN-SUFFIX,signal.link,PROXY
+DOMAIN-SUFFIX,signal.me,PROXY
+DOMAIN-SUFFIX,signal.org,PROXY
+DOMAIN-SUFFIX,signal.tube,PROXY
+DOMAIN-SUFFIX,snapkit.com,PROXY
+DOMAIN-SUFFIX,staticflickr.com,PROXY
+DOMAIN-SUFFIX,substack.com,PROXY
+DOMAIN-SUFFIX,triller.co,PROXY
+DOMAIN-SUFFIX,tumblr.com,PROXY
+DOMAIN-SUFFIX,vsco.co,PROXY
