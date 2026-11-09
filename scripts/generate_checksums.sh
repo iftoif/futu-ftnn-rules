@@ -11,6 +11,11 @@ cp "$ROOT_DIR/modules/FTNN.module" "$DIST_DIR/modules/FTNN.module"
 cp "$ROOT_DIR/modules/coding.module" "$DIST_DIR/modules/coding.module"
 cp "$ROOT_DIR/modules/social-media.module" "$DIST_DIR/modules/social-media.module"
 cp "$ROOT_DIR/rules/default.conf" "$DIST_DIR/rules/default.conf"
+cp "$ROOT_DIR/rules/ftnn.list" "$DIST_DIR/rules/ftnn.list"
+cp "$ROOT_DIR/rules/claude-anthropic.list" "$DIST_DIR/rules/claude-anthropic.list"
+cp "$ROOT_DIR/rules/coding.list" "$DIST_DIR/rules/coding.list"
+cp "$ROOT_DIR/rules/social-media.list" "$DIST_DIR/rules/social-media.list"
+cp "$ROOT_DIR/rules/clash-template.yaml" "$DIST_DIR/rules/clash-template.yaml"
 
 release_files=()
 while IFS= read -r file; do

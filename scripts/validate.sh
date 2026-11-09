@@ -13,6 +13,11 @@ files=(
   "$ROOT_DIR/modules/coding.module"
   "$ROOT_DIR/modules/social-media.module"
   "$ROOT_DIR/rules/default.conf"
+  "$ROOT_DIR/rules/ftnn.list"
+  "$ROOT_DIR/rules/claude-anthropic.list"
+  "$ROOT_DIR/rules/coding.list"
+  "$ROOT_DIR/rules/social-media.list"
+  "$ROOT_DIR/rules/clash-template.yaml"
 )
 
 for file in "${files[@]}"; do
@@ -35,6 +40,19 @@ done
 
 grep -qxF "[General]" "$ROOT_DIR/rules/default.conf" || fail "missing [General] in default.conf"
 grep -qxF "[Rule]" "$ROOT_DIR/rules/default.conf" || fail "missing [Rule] in default.conf"
+
+# Clash classical rule lists: every non-comment line must be TYPE,payload,policy[,params]
+allowed_types='DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-REGEX|IP-CIDR|IP-CIDR6|IP-ASN|GEOIP|GEOSITE|DST-PORT|SRC-PORT|PROCESS-NAME|PROCESS-PATH|MATCH'
+for list in "$ROOT_DIR"/rules/*.list; do
+  [ -f "$list" ] || fail "missing required file: $list"
+  while IFS= read -r line; do
+    case "$line" in ''|'#'*) continue ;; esac
+    echo "$line" | grep -qE "^(${allowed_types}),[^,]+,(PROXY|US|DIRECT)(,no-resolve)?$" \
+      || fail "invalid classical rule in $list: $line"
+  done < "$list"
+done
+
+grep -q '^  - RULE-SET,ftnn,PROXY$' "$ROOT_DIR/rules/clash-template.yaml" || fail "missing RULE-SET references in clash-template.yaml"
 
 awk '
   BEGIN { ok = 1 }

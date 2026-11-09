@@ -1,0 +1,16 @@
+DOMAIN-SUFFIX,claude.ai,US
+DOMAIN-SUFFIX,anthropic.com,US
+DOMAIN,platform.claude.com,US
+DOMAIN,console.anthropic.com,US
+DOMAIN,api.anthropic.com,US
+DOMAIN,status.claude.com,US
+DOMAIN,status.anthropic.com,US
+DOMAIN,docs.anthropic.com,US
+DOMAIN,support.anthropic.com,US
+DOMAIN-SUFFIX,cdn.claude.ai,US
+DOMAIN-SUFFIX,github.com,US
+DOMAIN-SUFFIX,githubusercontent.com,US
+DOMAIN-SUFFIX,githubassets.com,US
+DOMAIN-SUFFIX,api.github.com,US
+DOMAIN-SUFFIX,npmjs.org,US
+DOMAIN-SUFFIX,registry.npmjs.org,US

@@ -1,0 +1,91 @@
+# Clash / mihomo 配置模板 — futu-ftnn-rules
+#
+# 用法:
+#   1. 把 proxies 段的占位符(<YOUR_*>)替换为你自己的节点信息,uuid 必填;
+#   2. 导入任意 Clash/mihomo 内核客户端(官方 Clash Apple 版、Clash Party、
+#      Clash Verge Rev、Stash 等)。
+#
+# 要求:vless xhttp 节点需 mihomo 内核 ≥ v1.19.23(推荐 ≥ v1.19.33,
+# xhttp mode=auto / h3 等完整支持)。
+#
+# 规则文件(classical,text)默认走 jsDelivr CDN(国内可直连);
+# 也可把 url 换成 raw.githubusercontent.com 或 GitHub Pages 同路径地址。
+
+mixed-port: 7890
+allow-lan: false
+log-level: warning
+
+proxies:
+  - name: HK-任我行
+    type: vless
+    server: <YOUR_SERVER>          # 节点地址
+    port: 443
+    uuid: <YOUR_UUID>              # 必填
+    network: xhttp
+    tls: true
+    udp: true
+    servername: <YOUR_SNI>         # REALITY SNI
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: <YOUR_PUBLIC_KEY>
+      short-id: <YOUR_SHORT_ID>
+    xhttp-opts:
+      path: <YOUR_PATH>
+      mode: auto
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies: [HK-任我行, DIRECT]
+  - name: US
+    type: select
+    proxies: [HK-任我行, DIRECT]
+
+rule-providers:
+  ftnn:
+    type: http
+    behavior: classical
+    format: text
+    url: https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/rules/ftnn.list
+    path: ./ruleset/ftnn.list
+    interval: 86400
+  claude-anthropic:
+    type: http
+    behavior: classical
+    format: text
+    url: https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/rules/claude-anthropic.list
+    path: ./ruleset/claude-anthropic.list
+    interval: 86400
+  coding:
+    type: http
+    behavior: classical
+    format: text
+    url: https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/rules/coding.list
+    path: ./ruleset/coding.list
+    interval: 86400
+  social-media:
+    type: http
+    behavior: classical
+    format: text
+    url: https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/rules/social-media.list
+    path: ./ruleset/social-media.list
+    interval: 86400
+
+rules:
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  # classical 规则集忽略行内策略名(RULE-SET 声明的目标优先生效),
+  # 因此 FTNN 模块中的 DIRECT 段在这里以内联规则补回:
+  - IP-CIDR,18.166.128.200/32,DIRECT,no-resolve
+  - IP-CIDR,193.112.84.180/32,DIRECT,no-resolve
+  - IP-CIDR,120.77.112.223/32,DIRECT,no-resolve
+  - IP-CIDR,119.28.183.126/32,DIRECT,no-resolve
+  - IP-CIDR,13.215.114.231/32,DIRECT,no-resolve
+  - RULE-SET,ftnn,PROXY
+  - RULE-SET,claude-anthropic,US
+  - RULE-SET,coding,PROXY
+  - RULE-SET,social-media,PROXY
+  - GEOIP,CN,DIRECT
+  - MATCH,DIRECT

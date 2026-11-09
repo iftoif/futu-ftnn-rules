@@ -42,6 +42,11 @@ jobs:
             dist/modules/coding.module
             dist/modules/social-media.module
             dist/rules/default.conf
+            dist/rules/ftnn.list
+            dist/rules/claude-anthropic.list
+            dist/rules/coding.list
+            dist/rules/social-media.list
+            dist/rules/clash-template.yaml
             dist/sha256.txt
             dist/md5.txt
             dist/CHANGELOG.md

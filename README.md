@@ -13,6 +13,7 @@
 - Stash
 - Loon
 - Quantumult X
+- Clash / mihomo(官方 Clash Apple 版、Clash Party、Clash Verge Rev 等,经 `rules/*.list` + 模板)
 
 ## 独立订阅地址
 
@@ -123,6 +124,28 @@ Shadowrocket
 -> 设为默认配置
 ```
 
+## Clash / mihomo
+
+规则以 classical text 规则集(`rules/*.list`)分发,规则行内自带策略名(`PROXY` / `US` / `DIRECT`);vless xhttp 节点需 mihomo 内核 ≥ v1.19.23(推荐 ≥ v1.19.33)。
+
+两点已知差异(有意为之):
+
+1. **classical 规则集会忽略行内策略名**,以 `RULE-SET` 行声明的目标为准——所以模板已把 FTNN 模块的 5 条 DIRECT IP 段以内联规则补回,provider 使用方的行为与模块一致。
+2. coding 模块中的 2 条 `IP-ASN` 规则未收入 `.list`(mihomo 需运行时下载 ASN 数据库,避免移动端国内网络首跑失败;相关服务均有域名规则覆盖)。
+
+```text
+https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/rules/ftnn.list
+https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/rules/claude-anthropic.list
+https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/rules/coding.list
+https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/rules/social-media.list
+```
+
+完整配置模板(含 rule-providers / 策略组引用示例,填入自己的节点即可用):
+
+```text
+https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/rules/clash-template.yaml
+```
+
 ## 版本管理
 
 使用 Semantic Versioning:
@@ -169,6 +192,11 @@ git push origin v1.1.0
 - `modules/coding.module`
 - `modules/social-media.module`
 - `rules/default.conf`
+- `rules/ftnn.list`
+- `rules/claude-anthropic.list`
+- `rules/coding.list`
+- `rules/social-media.list`
+- `rules/clash-template.yaml`
 - `sha256.txt`
 - `md5.txt`
 - `CHANGELOG.md`
@@ -193,6 +221,11 @@ https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/modules/FTNN.module
 https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/modules/coding.module
 https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/modules/social-media.module
 https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/rules/default.conf
+https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/rules/ftnn.list
+https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/rules/claude-anthropic.list
+https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/rules/coding.list
+https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/rules/social-media.list
+https://cdn.jsdelivr.net/gh/iftoif/futu-ftnn-rules@main/rules/clash-template.yaml
 ```
 
 指定版本:
